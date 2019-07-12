@@ -1,0 +1,32 @@
+{
+  "Rules": [
+
+    {
+      "__type": "PenaltyData:#PenaltyCalculations.Model",
+      "PeriodFrom": 0,
+      "Coefficient": 0
+    },
+    {
+      "__type": "PenaltyData:#PenaltyCalculations.Model",
+      "PeriodFrom": 30,
+      "Coefficient": 0.0033333333333333
+    },
+    {
+      "__type": "PenaltyData:#PenaltyCalculations.Model",
+      "PeriodFrom": 60,
+      "Coefficient": 0.0076923076923077
+    }
+  ]
+}
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+

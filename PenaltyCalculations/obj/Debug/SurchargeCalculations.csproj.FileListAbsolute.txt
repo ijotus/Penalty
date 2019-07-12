@@ -1,0 +1,6 @@
+F:\Code\TestObjective\SurchargeCalculations\SurchargeCalculations\bin\Debug\SurchargeCalculations.exe
+F:\Code\TestObjective\SurchargeCalculations\SurchargeCalculations\bin\Debug\SurchargeCalculations.pdb
+F:\Code\TestObjective\SurchargeCalculations\SurchargeCalculations\obj\Debug\SurchargeCalculations.csproj.CoreCompileInputs.cache
+F:\Code\TestObjective\SurchargeCalculations\SurchargeCalculations\obj\Debug\SurchargeCalculations.exe
+F:\Code\TestObjective\SurchargeCalculations\SurchargeCalculations\obj\Debug\SurchargeCalculations.pdb
+F:\Code\TestObjective\SurchargeCalculations\SurchargeCalculations\obj\Debug\SurchargeCalculations.csprojAssemblyReference.cache
