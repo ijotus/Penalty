@@ -6,5 +6,6 @@ namespace PenaltyCalculations
     {
         int PeriodFrom { get; }
         Decimal Coefficient { get; }
+        string CoefficientView { get; }
     }
 }

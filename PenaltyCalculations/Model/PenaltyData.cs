@@ -12,10 +12,14 @@ namespace PenaltyCalculations.Model
         [field: DataMember(Name = "Coefficient")]
         public Decimal Coefficient { get; }
 
-        public PenaltyData(int periodFrom, Decimal coefficient)
+        [field: DataMember(Name = "CoefficientView")]
+        public string CoefficientView { get; }
+
+        public PenaltyData(int periodFrom, Decimal coefficient,string coefficientView)
         {
             PeriodFrom  = periodFrom;
             Coefficient = coefficient;
+            CoefficientView = coefficientView;
         }
     }
 }

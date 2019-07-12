@@ -4,17 +4,21 @@
     {
       "__type": "PenaltyData:#PenaltyCalculations.Model",
       "PeriodFrom": 0,
-      "Coefficient": 0
+      "Coefficient": 0,
+      "CoefficientView": "0"
+
     },
     {
       "__type": "PenaltyData:#PenaltyCalculations.Model",
       "PeriodFrom": 30,
-      "Coefficient": 0.0033333333333333
+      "Coefficient": 0.0033333333333333,
+      "CoefficientView": "1/300"
     },
     {
       "__type": "PenaltyData:#PenaltyCalculations.Model",
       "PeriodFrom": 60,
-      "Coefficient": 0.0076923076923077
+      "Coefficient": 0.0076923076923077,
+      "CoefficientView": "1/130"
     }
   ]
 }

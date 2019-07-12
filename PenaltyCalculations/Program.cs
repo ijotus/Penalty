@@ -13,13 +13,15 @@ namespace PenaltyCalculations
             var providers = new DataProvider();
             providers.InitializeCase0();
             var res = new PenaltyCalculations(providers, providers, providers);
-            Console.WriteLine("============================ ЗАДАЧА 1 ============================");
+            Console.WriteLine("==================================== ЗАДАЧА 1 ====================================");
+            res.Calculate(DateTime.Now);
+
+            providers.InitializeCase1();
+            Console.WriteLine("==================================== ЗАДАЧА 2 ====================================");
             res.Calculate(DateTime.Now);
 
             providers.InitializeCase2();
-            /*  var res = new PenaltyCalculations(providers, providers, providers);*/
-
-            Console.WriteLine("============================ ЗАДАЧА 3 ============================");
+            Console.WriteLine("===================================== ЗАДАЧА 3 ===================================");
             res.Calculate(DateTime.Now);
         }
     }

@@ -37,7 +37,7 @@ namespace PenaltyCalculations
                 var from = period.CalculatePeriod(accrual.Date);
                 var fromTemp = from;
                 var daysCount = (int)(date - from).TotalDays;
-                Console.WriteLine($"from: {from:dd-MM-yyyy}  daysCount={daysCount}");
+                Console.WriteLine($"дата: {from:dd-MM-yyyy}  кол-во дней :{daysCount}");
                 var penaltyDatas = _penaltyRulesProvider.PenaltyRules.Data.Where(rule => daysCount > rule.PeriodFrom).ToArray();
                 for (int i = 0; i < penaltyDatas.Length; ++i)
                 {
@@ -64,12 +64,14 @@ namespace PenaltyCalculations
                     var payments = _accountProvider.Account.Payments.Where(elt => elt.Date >= fromTemp && elt.Date <= dateTo).ToArray();
 
                     var penalty = accrual.Value * dc * penaltyData.Coefficient * bankRate / 100;
-                    var report = new ReportPenalty(accrual.Value,penalty, fromTemp, dateTo, bankRate, penaltyData.Coefficient,dc);
+                    var report = new ReportPenalty(accrual.Value,penalty, fromTemp, dateTo, bankRate, penaltyData.Coefficient,dc, penaltyData.CoefficientView);
                     report.DebugView();
 
                     reports.Add( new AccountReport(report, null));
                     fromTemp = dateTo + new TimeSpan(1, 0, 0, 0);
                 }
+
+                Console.WriteLine(string.Empty);
             }
             return reports.ToArray();
         }

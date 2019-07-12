@@ -1,0 +1,97 @@
+{
+  "Accrual": [
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-01-2018",
+      "Value": 4810.17
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-02-2018",
+      "Value": 4907.86
+    },    
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-03-2018",
+      "Value": 4410.94
+    }
+    ,
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-04-2018",
+      "Value": 4532.01
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-05-2018",
+      "Value": 4021.63
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-06-2018",
+      "Value": 3101.86
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-07-2018",
+      "Value": 3998.35
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-08-2018",
+      "Value": 3488.95
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-09-2018",
+      "Value": 3456.08
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-10-2018",
+      "Value": 3259.56
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-11-2018",
+      "Value": 5410.03
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-12-2018",
+      "Value": 5354.02
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-01-2019",
+      "Value": 4165.03
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-02-2019",
+      "Value": 5280.39
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-03-2019",
+      "Value": 5024.35
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-04-2019",
+      "Value": 1355.51
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-05-2019",
+      "Value": 2051.25
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "01-06-2019",
+      "Value": 2708.00
+    }
+  ],
+  "Payments": []
+}
+
