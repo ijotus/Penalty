@@ -71,11 +71,13 @@ namespace PenaltyCalculations
                 _account = serializer.ReadObject(stream) as PersonalAccount;
             }
 
+            serializer = new DataContractJsonSerializer(typeof(BankRate), settings);
             using (var stream = new FileStream("bankRate.json", FileMode.Open))
             {
                 _bankRate = serializer.ReadObject(stream) as IBankRate;
             }
 
+            serializer = new DataContractJsonSerializer(typeof(PenaltyRules), settings);
             using (var stream = new FileStream("rules.json", FileMode.Open))
             {
                 _penaltyRules = serializer.ReadObject(stream) as IPenaltyRules;

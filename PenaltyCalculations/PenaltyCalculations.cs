@@ -37,11 +37,12 @@ namespace PenaltyCalculations
                 var from = period.CalculatePeriod(accrual.Date);
                 var fromTemp = from;
                 var daysCount = (int)(date - from).TotalDays;
-                Console.WriteLine($"daysCount={daysCount}");
+                Console.WriteLine($"from: {from:dd-MM-yyyy}  daysCount={daysCount}");
                 var penaltyDatas = _penaltyRulesProvider.PenaltyRules.Data.Where(rule => daysCount > rule.PeriodFrom).ToArray();
                 for (int i = 0; i < penaltyDatas.Length; ++i)
                 {
-                    var bankRate = _bankRateProvider.BankRate.Rate.First(elt => elt.Date <= DateTime.Now).Value;
+                    //var bankRate = _bankRateProvider.BankRate.Rate.First(elt => elt.Date <= DateTime.Now).Value;
+                    var bankRate = _bankRateProvider.BankRate.Rate.LastOrDefault(elt => elt.Date <= from)?.Value ?? 100;
                     var penaltyData = penaltyDatas[i];
                     var dateTo = DateTime.Now;
                     int dc = daysCount;
@@ -50,12 +51,17 @@ namespace PenaltyCalculations
                         daysCount -= penaltyDatas[i + 1].PeriodFrom;
                         dc = penaltyDatas[i+1].PeriodFrom;
                         dateTo = fromTemp + new TimeSpan(dc,0,0,0);
-                       
                     }
                     else
                     {
                         dc = daysCount;
                     }
+
+                    dc = Math.Max(0, dc);
+                    if(dc == 0)
+                        continue;
+
+                    var payments = _accountProvider.Account.Payments.Where(elt => elt.Date >= fromTemp && elt.Date <= dateTo).ToArray();
 
                     var penalty = accrual.Value * dc * penaltyData.Coefficient * bankRate / 100;
                     var report = new ReportPenalty(accrual.Value,penalty, fromTemp, dateTo, bankRate, penaltyData.Coefficient,dc);
