@@ -45,14 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
-    <Compile Include="AccountReport.cs" />
-    <Compile Include="IAccountReport.cs" />
-    <Compile Include="IReportDebtPayment.cs" />
+    <Compile Include="Model\Reports\AccountReport.cs" />
+    <Compile Include="Model\Reports\IAccountReport.cs" />
+    <Compile Include="Model\Reports\IReportDebtPayment.cs" />
     <Compile Include="Model\DateNowAndValue.cs" />
     <Compile Include="Model\DateAndValue.cs" />
     <Compile Include="Model\IAccountProvider.cs" />
     <Compile Include="Model\IDateAndValue.cs" />
-    <Compile Include="IReportPenalty.cs" />
+    <Compile Include="Model\Reports\IReportPenalty.cs" />
     <Compile Include="Model\IBankRateProvider.cs" />
     <Compile Include="Model\PaymentPeriodCalculationRule.cs" />
     <Compile Include="Model\IPaymentPeriodCalculationRule.cs" />
@@ -68,8 +68,8 @@
     <Compile Include="Model\IPersonalAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportDebtPayment.cs" />
-    <Compile Include="ReportPenalty.cs" />
+    <Compile Include="Model\Reports\ReportDebtPayment.cs" />
+    <Compile Include="Model\Reports\ReportPenalty.cs" />
     <Compile Include="PenaltyCalculations.cs" />
   </ItemGroup>
   <ItemGroup>
