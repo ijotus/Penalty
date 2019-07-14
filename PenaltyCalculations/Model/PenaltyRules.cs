@@ -14,9 +14,13 @@ namespace PenaltyCalculations.Model
         [field: DataMember(Name = "Rules")]
         public IPenaltyData[] Data { get; }
 
-        public PenaltyRules(IPenaltyData[] data)
+        [field: DataMember(Name = "PaymentPeriod")]
+        public int PaymentPeriod { get; }
+
+        public PenaltyRules(IPenaltyData[] data,int paymentPeriod)
         {
             Data = data;
+            PaymentPeriod = paymentPeriod;
         }
 
     }

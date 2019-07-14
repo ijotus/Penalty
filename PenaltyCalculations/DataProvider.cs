@@ -21,11 +21,11 @@ namespace PenaltyCalculations
 
         public DataProvider() { }
 
-        public void InitializeCase0()
+        public void InitializeCase1()
         {
             var settings = new DataContractJsonSerializerSettings { DateTimeFormat = new DateTimeFormat("dd-MM-yyyy") };
             var serializer = new DataContractJsonSerializer(typeof(IPersonalAccountData), settings);
-            using (var stream = new FileStream("account_0.json", FileMode.Open))
+            using (var stream = new FileStream("account_case_1.json", FileMode.Open))
             {
                 _accountData = serializer.ReadObject(stream) as IPersonalAccountData;
             }
@@ -34,29 +34,7 @@ namespace PenaltyCalculations
             _bankRate = new BankRate(new IDateAndValue[]{new DateNowAndValue(bankRate) });
 
             serializer = new DataContractJsonSerializer(typeof(PenaltyRules), settings);
-            using (var stream = new FileStream("rules.json", FileMode.Open))
-            {
-                _penaltyRules = serializer.ReadObject(stream) as IPenaltyRules;
-            }
-        }
-
-        public void InitializeCase1()
-        {
-            var settings = new DataContractJsonSerializerSettings { DateTimeFormat = new DateTimeFormat("dd-MM-yyyy") };
-            var serializer = new DataContractJsonSerializer(typeof(PersonalAccountData), settings);
-            using (var stream = new FileStream("account_1.json", FileMode.Open))
-            {
-                _accountData = serializer.ReadObject(stream) as IPersonalAccountData;
-            }
-
-            serializer = new DataContractJsonSerializer(typeof(BankRate), settings);
-            using (var stream = new FileStream("bankRate.json", FileMode.Open))
-            {
-                _bankRate = serializer.ReadObject(stream) as IBankRate;
-            }
-
-            serializer = new DataContractJsonSerializer(typeof(PenaltyRules), settings);
-            using (var stream = new FileStream("rules.json", FileMode.Open))
+            using (var stream = new FileStream("rules_case_1.json", FileMode.Open))
             {
                 _penaltyRules = serializer.ReadObject(stream) as IPenaltyRules;
             }
@@ -65,8 +43,8 @@ namespace PenaltyCalculations
         public void InitializeCase2()
         {
             var settings = new DataContractJsonSerializerSettings { DateTimeFormat = new DateTimeFormat("dd-MM-yyyy") };
-            var serializer = new DataContractJsonSerializer(typeof(IPersonalAccountData), settings);
-            using (var stream = new FileStream("account.json", FileMode.Open))
+            var serializer = new DataContractJsonSerializer(typeof(PersonalAccountData), settings);
+            using (var stream = new FileStream("account_case_2.json", FileMode.Open))
             {
                 _accountData = serializer.ReadObject(stream) as IPersonalAccountData;
             }
@@ -79,6 +57,28 @@ namespace PenaltyCalculations
 
             serializer = new DataContractJsonSerializer(typeof(PenaltyRules), settings);
             using (var stream = new FileStream("rules.json", FileMode.Open))
+            {
+                _penaltyRules = serializer.ReadObject(stream) as IPenaltyRules;
+            }
+        }
+
+        public void InitializeCase3()
+        {
+            var settings = new DataContractJsonSerializerSettings { DateTimeFormat = new DateTimeFormat("dd-MM-yyyy") };
+            var serializer = new DataContractJsonSerializer(typeof(IPersonalAccountData), settings);
+            using (var stream = new FileStream("account_case_2.json", FileMode.Open))
+            {
+                _accountData = serializer.ReadObject(stream) as IPersonalAccountData;
+            }
+
+            serializer = new DataContractJsonSerializer(typeof(BankRate), settings);
+            using (var stream = new FileStream("bankRate.json", FileMode.Open))
+            {
+                _bankRate = serializer.ReadObject(stream) as IBankRate;
+            }
+
+            serializer = new DataContractJsonSerializer(typeof(PenaltyRules), settings);
+            using (var stream = new FileStream("rules_case_3.json", FileMode.Open))
             {
                 _penaltyRules = serializer.ReadObject(stream) as IPenaltyRules;
             }

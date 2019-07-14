@@ -8,6 +8,7 @@ namespace PenaltyCalculations.Model
 {
     public interface IPenaltyRules
     {
+        int PaymentPeriod { get; }
         IPenaltyData[] Data { get; }
     }
 }

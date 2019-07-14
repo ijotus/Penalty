@@ -32,7 +32,7 @@ namespace PenaltyCalculations
         public IReport[] Calculate(DateTime date)
         {
             _balance = 0;
-            var period = new PaymentPeriodCalculationRule();
+            var period = new PaymentPeriodCalculationRule(_penaltyRulesProvider.PenaltyRules.PaymentPeriod);
             var reports = new List<IReport>();
 
             var allPayments = _accountProvider.AccountData.Payments.ToList().ToDictionary(elt => elt.Date, elt => elt);

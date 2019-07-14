@@ -8,12 +8,14 @@ namespace PenaltyCalculations.Model
 {
     public  class PaymentPeriodCalculationRule : IPaymentPeriodCalculationRule
     {
-        //TODO по 10 включительно нужно оплатить
-        //TODO вынести в db
-        private const int Days = 11;
+        private  int _days;
+        public PaymentPeriodCalculationRule(int days)
+        {
+            _days = days;
+        }
         public DateTime CalculatePeriod(DateTime date)
         {
-            var begin = new DateTime(date.Year,date.Month, Days, 0,0,0).AddMonths(1);
+            var begin = new DateTime(date.Year,date.Month, _days + 1, 0,0,0).AddMonths(1);
             return begin;
         }
     }
