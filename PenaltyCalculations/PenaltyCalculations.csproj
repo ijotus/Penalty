@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,7 +77,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Model\data\account_case_1.json" />
+    <None Include="Model\data\account_case_2.json" />
+    <None Include="Model\data\bankRate_case_1.json" />
+    <None Include="Model\data\bankRate_case_2.json" />
+    <None Include="Model\data\bankRate_case_3.json" />
+    <None Include="Model\data\rules_case_1.json" />
+    <None Include="Model\data\rules_case_3.json" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy  $(ProjectDir)Model\data $(TargetDir)\data\  /E  /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
