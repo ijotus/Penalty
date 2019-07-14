@@ -18,7 +18,8 @@ namespace PenaltyCalculations
 
             providers.InitializeCase1();
             Console.WriteLine("==================================== ЗАДАЧА 2 ====================================");
-            res.Calculate(DateTime.Now);
+            var reports = res.Calculate(DateTime.Now);
+            reports.ToList().ForEach(elt => elt.DebugView());
 
             /*providers.InitializeCase2();
             Console.WriteLine("===================================== ЗАДАЧА 3 ===================================");
