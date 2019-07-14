@@ -23,6 +23,7 @@ namespace PenaltyCalculations.Model.Reports
 
         public void DebugView()
         {
+            Console.WriteLine(string.Empty);
             Console.WriteLine($"дата: c {_dateFrom:dd-MM-yyyy} по {_dateTo:dd-MM-yyyy} кол-во дней :{_countDays}");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"на счету абонента: {_balance}");
