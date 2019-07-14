@@ -1,0 +1,46 @@
+{
+  "Rate": [
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "18-12-2017",
+      "Value": 7.75
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "12-02-2018",
+      "Value": 7.5
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "26-03-2018",
+      "Value": 7.2
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "17-09-2018",
+      "Value": 7.50 
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "07-12-2018",
+      "Value": 7.75
+    },
+    {
+      "__type": "DateAndValue:#PenaltyCalculations.Model",
+      "Date": "17-06-2019",
+      "Value": 7.5
+    }
+  ]
+}
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+

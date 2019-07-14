@@ -8,7 +8,7 @@ namespace PenaltyCalculations.Model
 {
     public  class PaymentPeriodCalculationRule : IPaymentPeriodCalculationRule
     {
-        private  int _days;
+        private readonly int _days;
         public PaymentPeriodCalculationRule(int days)
         {
             _days = days;

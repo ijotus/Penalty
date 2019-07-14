@@ -25,7 +25,7 @@ namespace PenaltyCalculations.Model.Reports
         {
             Console.WriteLine($"дата: c {_dateFrom:dd-MM-yyyy} по {_dateTo:dd-MM-yyyy} кол-во дней :{_countDays}");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Balance {_balance}");
+            Console.WriteLine($"на счету абонента: {_balance}");
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
