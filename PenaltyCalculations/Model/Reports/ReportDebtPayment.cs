@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PenaltyCalculations
+namespace PenaltyCalculations.Model.Reports
 {
     class ReportDebtPayment : IReportDebtPayment
     {
@@ -15,11 +11,14 @@ namespace PenaltyCalculations
         {
             DebtPayment = debtPayment;
             DateFrom = dateFrom;
+           
         }
 
         public void DebugView()
         {
-           
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"{-DebtPayment} {DateFrom:dd-MM-yyyy} Погашение части долга");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PenaltyCalculations.Model.Reports;
 
 namespace PenaltyCalculations
 {
     interface IPenaltyCalculations
     {
-        IAccountReport[] Calculate(DateTime date);
+        IReport[] Calculate(DateTime date);
     }
 }

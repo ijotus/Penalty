@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PenaltyCalculations
+namespace PenaltyCalculations.Model.Reports
 {
-    public interface IReportPenalty
+    public interface IReportPenalty : IReport
     {
         Decimal Debt { get; }
         Decimal Penalty { get; }
@@ -16,6 +11,5 @@ namespace PenaltyCalculations
         DateTime DateTo { get; }
         Decimal Rate { get; }
         Decimal Coefficient { get; }
-        void DebugView();
     }
 }

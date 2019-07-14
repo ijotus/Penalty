@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PenaltyCalculations.Model
 {
-    public interface IPersonalAccount
+    public interface IPersonalAccountData
     {
         IDateAndValue[] Accrual { get; }
         IDateAndValue[] Payments { get; }

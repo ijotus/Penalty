@@ -8,6 +8,6 @@ namespace PenaltyCalculations.Model
 {
     public interface IAccountProvider
     {
-        IPersonalAccount Account { get; }
+        IPersonalAccountData AccountData { get; }
     }
 }

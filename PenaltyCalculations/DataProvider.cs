@@ -14,9 +14,9 @@ namespace PenaltyCalculations
 
         public IBankRate BankRate => _bankRate;
 
-        private IPersonalAccount _account;
+        private IPersonalAccountData _accountData;
 
-        public IPersonalAccount Account => _account;
+        public IPersonalAccountData AccountData => _accountData;
 
 
         public DataProvider() { }
@@ -24,10 +24,10 @@ namespace PenaltyCalculations
         public void InitializeCase0()
         {
             var settings = new DataContractJsonSerializerSettings { DateTimeFormat = new DateTimeFormat("dd-MM-yyyy") };
-            var serializer = new DataContractJsonSerializer(typeof(IPersonalAccount), settings);
+            var serializer = new DataContractJsonSerializer(typeof(IPersonalAccountData), settings);
             using (var stream = new FileStream("account_0.json", FileMode.Open))
             {
-                _account = serializer.ReadObject(stream) as IPersonalAccount;
+                _accountData = serializer.ReadObject(stream) as IPersonalAccountData;
             }
 
             var bankRate = 7.5m;
@@ -43,10 +43,10 @@ namespace PenaltyCalculations
         public void InitializeCase1()
         {
             var settings = new DataContractJsonSerializerSettings { DateTimeFormat = new DateTimeFormat("dd-MM-yyyy") };
-            var serializer = new DataContractJsonSerializer(typeof(PersonalAccount), settings);
+            var serializer = new DataContractJsonSerializer(typeof(PersonalAccountData), settings);
             using (var stream = new FileStream("account_1.json", FileMode.Open))
             {
-                _account = serializer.ReadObject(stream) as IPersonalAccount;
+                _accountData = serializer.ReadObject(stream) as IPersonalAccountData;
             }
 
             serializer = new DataContractJsonSerializer(typeof(BankRate), settings);
@@ -65,10 +65,10 @@ namespace PenaltyCalculations
         public void InitializeCase2()
         {
             var settings = new DataContractJsonSerializerSettings { DateTimeFormat = new DateTimeFormat("dd-MM-yyyy") };
-            var serializer = new DataContractJsonSerializer(typeof(IPersonalAccount), settings);
+            var serializer = new DataContractJsonSerializer(typeof(IPersonalAccountData), settings);
             using (var stream = new FileStream("account.json", FileMode.Open))
             {
-                _account = serializer.ReadObject(stream) as IPersonalAccount;
+                _accountData = serializer.ReadObject(stream) as IPersonalAccountData;
             }
 
             serializer = new DataContractJsonSerializer(typeof(BankRate), settings);

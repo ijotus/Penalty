@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace PenaltyCalculations
+namespace PenaltyCalculations.Model.Reports
 {
-    interface IAccountReport
+    public interface IReport
     {
-        IReportPenalty ReportPenalty { get; }
-        IReportDebtPayment ReportDebtPayment { get; }
         void DebugView();
     }
 }

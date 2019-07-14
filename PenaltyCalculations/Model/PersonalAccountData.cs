@@ -9,18 +9,12 @@ namespace PenaltyCalculations.Model
 {
     [DataContract]
     [KnownType(typeof(DateAndValue))]
-    public class PersonalAccount : IPersonalAccount
+    public class PersonalAccountData : IPersonalAccountData
     {
         [field: DataMember(Name= "Accrual")]
         public IDateAndValue[] Accrual { get; }
 
         [field: DataMember(Name = "Payments")]
         public IDateAndValue[] Payments { get; }
-
-        public PersonalAccount(IDateAndValue[] accrual, IDateAndValue[] payments)
-        {
-            Accrual = accrual;
-            Payments = payments;
-        }
     }
 }
